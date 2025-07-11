@@ -1,0 +1,47 @@
+Config File: /home/benton/.config/solana/cli/config.yml
+RPC URL: https://api.devnet.solana.com 
+WebSocket URL: wss://api.devnet.solana.com/ (computed)
+Keypair Path: /home/benton/.config/solana/devnet.json 
+Commitment: confirmed 
+Requesting airdrop of 2 SOL
+
+Signature: 59Lo2WgGduoapyBeSjLdwBrSUbVkv16DXupyJVgxeMtsD257RoopPkB2DZ2ZTK3u7sTWABQFie64oCuEBhJYwv7r
+
+Creating token 3UDziHJzxc7yLthFFdXYwRTPYvGD5i5UW7EtcTndwuA7 under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  3UDziHJzxc7yLthFFdXYwRTPYvGD5i5UW7EtcTndwuA7
+Decimals:  8
+
+Signature: yJ4jztyMuNPQrrEk336R1HjDVv8kuAn6FYvrXmAeni5H7VvjqYSyhNbcM7avMS5ZmV4mFx1Mrry5qxXkqtNEcwe
+
+spl-token create-account <PLASMA_TOKEN_MINT>
+spl-token mint <PLASMA_TOKEN_MINT> 1000000000
+spl-token supply <PLASMA_TOKEN_MINT>  # Should say 1,000,000,000 PLASMA
+
+
+NEXT_PUBLIC_PLASMA_TOKEN_MINT=3UDziHJzxc7yLthFFdXYwRTPYvGD5i5UW7EtcTndwuA7
+
+Generating a new keypair
+Wrote new keypair to temp-mint.json
+========================================================================
+pubkey: 5VUjUs5xQ5W3rEcLAzbmFntzPMCF5hsGc9gThLMjd1Qu
+========================================================================
+Save this seed phrase to recover your new keypair:
+upper minor course page charge stomach era above label gown female never
+
+
+📦 Minting NFT on Solana devnet network
+✅ Mint authority will be: 4VHP4LxZ9pxYSYxPashQjLknLWNMY8LUj6J8dH86jYeR
+🪙 Token Mint Address: AjK1Zqpd4FTupZN9yD6ETGwRUWKFAeJES2Zki7HWTezj
+Creating account GjrFyRPJHkj5zzesGnYhwXSkKSVnsYDJH8bGgVpXpsqS
+
+Signature: 4myJ1wzbozzPafYGujhBMgrLHdfAi3THGSLUGPmb7FqWbtxzA2d9afv4PyfcJaEwQA8uXB2Tu81pvKWZLhMjAyzt
+
+Minting 1 tokens
+  Token: AjK1Zqpd4FTupZN9yD6ETGwRUWKFAeJES2Zki7HWTezj
+  Recipient: GjrFyRPJHkj5zzesGnYhwXSkKSVnsYDJH8bGgVpXpsqS
+
+Signature: 3z8HP5cy9cX9XLENbXng4k9EMw5bF4ZsviszXqXR33YdcTKVtA1vgT6fkFv52JQNM7TtYm98DSH2YS9uctzoFY8a
+
+https://explorer.solana.com/address/AjK1Zqpd4FTupZN9yD6ETGwRUWKFAeJES2Zki7HWTezj?cluster=devnet
+
