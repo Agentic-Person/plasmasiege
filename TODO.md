@@ -3,21 +3,29 @@
 ## Current Status
 - ✅ **Project Planning**: Comprehensive 8-week development plan created
 - ✅ **Blockchain**: PLASMA token and NFT collection deployed on Solana devnet
-- 🆘 **MCP SERVERS**: Must be set up first (HIGHEST PRIORITY)
-- 🚧 **Phase 1**: Foundation & Infrastructure (Week 1 - IN PROGRESS)
+- ✅ **MCP SERVERS**: Unity MCP server working, connected and ready
+- 🔶 **Phase 1**: Foundation & Infrastructure (Week 1 - PARTIAL/ISSUES FOUND)
 - ⏳ **Phases 2-7**: Core systems, economy, NFTs, polish (Weeks 2-8)
+
+## 🚨 CRITICAL ISSUES DISCOVERED (MUST FIX TOMORROW)
+1. **Mouse Control Broken**: Cursor must leave Unity window to turn ship - makes flight impossible
+2. **Arena Too Small**: Current 100x60x100 needs to be 500x300x500 (5x larger)
+3. **Ship Model Missing**: Need to implement imported Striker.fbx for orientation cues
+4. **Arena Not Integrated**: Scripts created but not added to Unity scene yet
 
 ## 🎯 8-Week Development Plan
 
 ### Phase 1: Foundation & Infrastructure (Week 1) 🚧
 **Goal**: Set up development environment and basic ship physics
 
-#### 1.1 MCP Server Setup (HIGHEST PRIORITY) ✅
+#### 1.1 MCP Server Setup ✅ COMPLETED
 - [x] Run `/home/benton/projects/plasmasiegeprj/setup-all-mcp.sh`
 - [x] Test with `/home/benton/projects/plasmasiegeprj/test-mcp-setup.sh`
-- [ ] Restart Cursor to load MCP configuration
-- [ ] Verify Unity MCP can create scripts
-- [ ] Verify N8N MCP can create workflows
+- [x] Start all services with `/home/benton/projects/plasmasiegeprj/start-all-services.sh`
+- [x] Restart Cursor to load MCP configuration
+- [x] Verify Unity MCP can create scripts - WORKING on ws://localhost:5010
+- [x] Fixed Unity MCP WebSocket handler signature issue
+- [ ] Verify N8N MCP can create workflows (not needed for current phase)
 
 #### 1.2 Unity Project Configuration ❌
 - [ ] Configure Unity 6000.1.9f1 LTS project settings
@@ -27,13 +35,19 @@
 - [ ] Configure tags: Player, Ship, PlasmaOrb, Boundary, Pickup
 - [ ] Import existing scripts from Assets folder
 
-#### 1.3 Complete Stage 1: Ship Physics ❌
-- [ ] Create Scout ship prefab with Rigidbody
-- [ ] Attach and test ShipController.cs
-- [ ] Implement 6DOF movement (WASD + Mouse)
-- [ ] Create arena with boundaries
-- [ ] Test HolographicShipTester UI
-- [ ] Ensure 60 FPS performance
+#### 1.3 Ship Physics & Arena System 🔶 PARTIAL - CRITICAL ISSUES FOUND
+**Completed**:
+- [x] Ship physics working (FlyingShipFixed.cs with 6DOF movement)
+- [x] Arena system scripts created (ArenaGenerator.cs + ArenaInfoGUI.cs)
+- [x] Striker ship assets imported (FBX, OBJ, Orange texture)
+- [x] Arena features: boundaries, asteroids, directional markers
+
+**🚨 CRITICAL ISSUES TO FIX TOMORROW**:
+- [ ] **Mouse Control BROKEN**: Cursor leaves window, ship uncontrollable - FIX FIRST
+- [ ] **Arena Scale**: Change from 100x60x100 to 500x300x500 (5x larger)
+- [ ] **Integrate Arena**: Add ArenaGenerator to Unity scene and test
+- [ ] **Striker Ship Model**: Replace current ship with imported Striker.fbx
+- [ ] **Performance Test**: Ensure 60 FPS with larger arena
 
 #### 1.4 N8N Docker Setup ❌
 - [ ] Install Docker if needed
@@ -175,46 +189,46 @@
 
 ## Immediate Tasks (High Priority) - Detailed
 
-### 0. MCP SERVERS SETUP (HIGHEST PRIORITY)
+### 0. MCP SERVERS SETUP (COMPLETED ✅)
 **Purpose**: Enable Unity and N8N integration with Claude for automated development
 
-- [ ] **Run Complete MCP Setup**
+- [x] **Run Complete MCP Setup**
   ```bash
   cd /home/benton/projects/plasmasiegeprj/plasmasiege
   ./setup-all-mcp.sh
   ```
-  This installs:
-  - Unity MCP Server (Python-based)
-  - N8N MCP Server (npm package)
+  ✅ Installed:
+  - Unity MCP Server (Python-based) - Running on ws://localhost:5010
+  - N8N MCP Server (npm package) - Configured
   - All dependencies and virtual environments
   - Startup and testing scripts
 
-- [ ] **Start All Services**
+- [x] **Start All Services**
   ```bash
   /home/benton/projects/plasmasiegeprj/start-all-services.sh
   ```
-  This starts:
-  - N8N Docker container at http://localhost:5678
-  - Sets up MCP server connections
-  - Creates all necessary directories
+  ✅ Started:
+  - N8N Docker container at http://localhost:5678 (admin/plasmasiege2024)
+  - Unity MCP server on port 5010
+  - All necessary services running
 
-- [ ] **Restart Cursor (CRITICAL)**
+- [ ] **Restart Cursor (CRITICAL - DO THIS NOW)**
   - Close Cursor completely (all windows)
   - Reopen Cursor
   - MCP servers should auto-connect
   - Look for MCP indicators in Cursor
 
-- [ ] **Verify MCP Setup**
+- [x] **Verify MCP Setup**
   ```bash
   /home/benton/projects/plasmasiegeprj/test-mcp-setup.sh
   ```
-  This checks:
+  ✅ Verified:
   - Unity MCP server files exist
   - N8N MCP package installed
   - Python virtual environment working
   - MCP configuration valid
 
-- [ ] **Test MCP Integration**
+- [ ] **Test MCP Integration (AFTER CURSOR RESTART)**
   - Try asking Claude to create a Unity script
   - Try asking Claude to create an N8N workflow
   - Verify Unity project path is accessible
@@ -445,9 +459,9 @@ spl-token balance 3UDziHJzxc7yLthFFdXYwRTPYvGD5i5UW7EtcTndwuA7
 
 ---
 
-**Last Updated:** 2025-07-07
+**Last Updated:** 2025-07-14
 **Current Phase:** Phase 1 - Foundation & Infrastructure (Week 1)
-**Next Milestone:** Complete MCP setup and basic ship physics
+**Next Milestone:** Restart Cursor to enable MCP, then configure Unity project settings
 
 ## Quick Links
 - [Executive Summary](docs/executive-summary.md)
