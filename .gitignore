@@ -1,1 +1,62 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+docs/.env
+*/.env
 
+# Unity generated files
+plasmasiegeUnity/Library/
+plasmasiegeUnity/Temp/
+plasmasiegeUnity/Logs/
+plasmasiegeUnity/UserSettings/
+plasmasiegeUnity/obj/
+plasmasiegeUnity/Build/
+plasmasiegeUnity/Builds/
+*.tmp
+
+# Node.js (for N8N and other tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (for MCP servers)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# Compiled output
+dist/
+build/
+*.exe
