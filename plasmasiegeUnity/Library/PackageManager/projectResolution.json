@@ -9,6 +9,16 @@
     "/home/benton/Unity/Hub/Editor/6000.1.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
+    "com.justinpbarnett.unity-mcp@https://github.com/justinpbarnett/unity-mcp.git?path=/UnityMcpBridge": {
+      "name": "com.justinpbarnett.unity-mcp",
+      "displayName": "Unity MCP Bridge",
+      "resolvedPath": "/home/benton/projects/plasmasiegeprj/plasmasiegeUnity/Library/PackageCache/com.justinpbarnett.unity-mcp@592a3ad00d0a",
+      "fingerprint": "592a3ad00d0a32ab63fe4c3b6f26be81e5e1da5e",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "2.0.0",
+      "source": "git",
+      "testable": false
+    },
     "com.unity.collab-proxy@2.5.1": {
       "name": "com.unity.collab-proxy",
       "displayName": "Version Control",
@@ -389,6 +399,16 @@
       "fingerprint": "205a02cbcb39584f20b51c49b853047aceb3a3a7",
       "editorCompatibility": "2019.3.0a1",
       "version": "1.2.6",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.nuget.newtonsoft-json@3.2.1": {
+      "name": "com.unity.nuget.newtonsoft-json",
+      "displayName": "Newtonsoft Json",
+      "resolvedPath": "/home/benton/projects/plasmasiegeprj/plasmasiegeUnity/Library/PackageCache/com.unity.nuget.newtonsoft-json@74deb55db2a0",
+      "fingerprint": "74deb55db2a0c29ddfda576608bcb86abbd13ee6",
+      "editorCompatibility": "2018.4.0a1",
+      "version": "3.2.1",
       "source": "registry",
       "testable": false
     },
